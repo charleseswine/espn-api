@@ -9,8 +9,8 @@ class LeaguePastTest(TestCase):
     def setUp(self):
         self.league_id = 123
         self.season = 2015
-        self.espn_endpoint = "https://fantasy.espn.com/apis/v3/games/ffl/leagueHistory/" + str(self.league_id) + "?seasonId=2015"
-        self.players_endpoint = 'https://fantasy.espn.com/apis/v3/games/ffl/seasons/' + str(self.season) + '/players?view=players_wl'
+        self.espn_endpoint = "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/" + str(self.league_id) + "?seasonId=2015"
+        self.players_endpoint = 'https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/' + str(self.season) + '/players?view=players_wl'
         with open('tests/football/unit/data/league_2015_data.json') as data:
             self.league_data = json.loads(data.read())
         with open('tests/football/unit/data/league_draft_2015.json') as data:
